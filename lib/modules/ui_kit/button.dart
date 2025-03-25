@@ -1,30 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
 import 'package:flutter_application_2/core/helper/theme_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: UiButton(
-          function: Navigator(),
-          nameButton: "see all tours",
-          colorButton: ThemeHelper.green,
-          isIcon: true,
-          widthButton: 220,
-          heightButton: 50,
-          radiusButton: 10,
-          isBlack: false,
-          textStyle: TexstyleHelper.small14w400black,
-        ),
-      ),
-    );
-  }
-}
 
 class UiButton extends StatelessWidget {
   final String nameButton;

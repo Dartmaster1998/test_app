@@ -12,8 +12,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    ;
-
     navigate();
     super.initState();
   }
@@ -35,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("lib/assets/images/splash.jpg"),
-            fit: BoxFit.cover
+            fit: BoxFit.cover,
           ),
         ),
       ),
