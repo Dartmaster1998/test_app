@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/helper/theme_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-class UiButton extends StatelessWidget {
+class AppButton extends StatelessWidget {
   final String nameButton;
   final Color colorButton;
   final bool isIcon;
@@ -14,7 +13,7 @@ class UiButton extends StatelessWidget {
   final TextStyle textStyle;
   final Widget function;
 
-  const UiButton({
+  const AppButton({
     super.key,
     required this.nameButton,
     required this.colorButton,

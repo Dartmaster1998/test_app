@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/modules/auth/auth_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+@RoutePage()
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -32,8 +34,8 @@ class _SplashScreenState extends State<SplashScreen> {
         height: 1.sh,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("lib/assets/images/splash.jpg"),
-            fit: BoxFit.cover,
+            image: AssetImage("assets/images/splash.jpg"),
+            fit: BoxFit.fill,
           ),
         ),
       ),

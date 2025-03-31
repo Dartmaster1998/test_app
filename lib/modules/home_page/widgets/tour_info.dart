@@ -3,13 +3,13 @@ import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
 import 'package:flutter_application_2/modules/ui_kit/info_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Tour_widget extends StatelessWidget {
+class TourInfo extends StatelessWidget {
   final String name;
   final String day;
   final String date;
   final String place;
   final String img;
-  const Tour_widget({
+  const TourInfo({
     super.key,
     required this.name,
     required this.day,

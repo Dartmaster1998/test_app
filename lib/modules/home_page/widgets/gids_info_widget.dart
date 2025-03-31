@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GidsInfo extends StatelessWidget {
+class GidsInfoWidget extends StatelessWidget {
   final String name;
   final String img;
   final double raiting;
   final int comments;
   final int experience;
-  const GidsInfo({
+  const GidsInfoWidget({
     super.key,
     required this.name,
     required this.img,

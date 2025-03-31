@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
 import 'package:flutter_application_2/core/helper/theme_helper.dart';
 import 'package:flutter_application_2/modules/comments/comments.dart';
-import 'package:flutter_application_2/modules/ui_kit/button.dart';
+import 'package:flutter_application_2/modules/ui_kit/app_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UnCommonWidget extends StatelessWidget {
@@ -34,7 +34,7 @@ class UnCommonWidget extends StatelessWidget {
           children: [
             Text("Отзывы", style: TexstyleHelper.medium24w600),
             SizedBox(height: 16.h),
-            UiButton(
+            AppButton(
               function:Comments() ,
               nameButton: "Оставить свой отзыв",
               colorButton: ThemeHelper.orangge,

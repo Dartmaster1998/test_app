@@ -1,16 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
 import 'package:flutter_application_2/core/helper/theme_helper.dart';
 import 'package:flutter_application_2/modules/contacts/cotacts_page.dart';
-import 'package:flutter_application_2/modules/ui_kit/button.dart';
+import 'package:flutter_application_2/modules/ui_kit/app_button.dart';
 import 'package:flutter_application_2/modules/ui_kit/textfield_widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContactUS extends StatelessWidget {
-  const ContactUS({
-    super.key,
-  });
+  const ContactUS({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +55,7 @@ class ContactUS extends StatelessWidget {
             isComment: true,
           ),
           SizedBox(height: 38.h),
-          UiButton(
+          AppButton(
             function: ContactsPage(),
             nameButton: "Оставить заявку",
             colorButton: ThemeHelper.orangge,

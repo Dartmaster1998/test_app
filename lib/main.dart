@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/modules/auth/registration.dart';
 import 'package:flutter_application_2/modules/splash/splash_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

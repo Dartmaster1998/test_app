@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/modules/ui_kit/drawe_widget.dart';
+import 'package:flutter_application_2/modules/auth/registration.dart';
+import 'package:flutter_application_2/modules/ui_kit/drawer_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -15,12 +16,12 @@ class _LoginPageState extends State<LoginPage> {
     if (loginController.text == "aidar" && passwordController.text == "aidar") {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => DrawerPage()),
+        MaterialPageRoute(builder: (context) => DrawerWidget()),
       );
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Неверный логин или пароль")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Неверный логин или пароль")));
     }
   }
 
@@ -35,12 +36,11 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
               Text(
                 "Вход",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 16.h),
               TextField(
                 controller: loginController,
                 decoration: InputDecoration(
@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 12.h),
               TextField(
                 controller: passwordController,
                 obscureText: true,
@@ -57,16 +57,20 @@ class _LoginPageState extends State<LoginPage> {
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 12.h),
+              TextButton(onPressed: () {}, child: Text("Забыли пароль?")),
               TextButton(
-                onPressed: () {},
-                child: Text("Забыли пароль?"),
-              ),
-              TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegistrationWidget(),
+                    ),
+                  );
+                },
                 child: Text("Зарегистрироваться"),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 16.h),
               ElevatedButton(
                 onPressed: _login,
                 style: ElevatedButton.styleFrom(
@@ -74,7 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                   padding: EdgeInsets.symmetric(vertical: 12),
                 ),
                 child: Center(
-                  child: Text("Вход", style: TextStyle(fontSize: 16, color: Colors.white)),
+                  child: Text(
+                    "Вход",
+                    style: TextStyle(fontSize: 16.sp, color: Colors.white),
+                  ),
                 ),
               ),
             ],

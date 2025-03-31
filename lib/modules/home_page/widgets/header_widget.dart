@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
-import 'package:flutter_application_2/modules/ui_kit/drawe_widget.dart';
+import 'package:flutter_application_2/modules/ui_kit/drawer_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HeaderWidget extends StatelessWidget {
@@ -14,14 +14,11 @@ class HeaderWidget extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('lib/assets/images/main.png'),
+          image: AssetImage('assets/images/main.png'),
         ),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: WidgetAppBar(
-        width: 1.sw,
-        height: 50.h,
-      ),
+      child: WidgetAppBar(width: 1.sw, height: 50.h),
     );
   }
 }
@@ -48,7 +45,13 @@ class WidgetAppBar extends StatelessWidget {
             children: [
               Text("LOGO", style: TexstyleHelper.small14w400black),
 
-              DrawerButton(onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => DrawerPage()));}),
+              DrawerButton(
+                onPressed: () {
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => DrawerWidget()));
+                },
+              ),
             ],
           ),
         ),

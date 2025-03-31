@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/helper/texstyle_helper.dart';
 import 'package:flutter_application_2/core/helper/theme_helper.dart';
 import 'package:flutter_application_2/modules/payment/payment.dart';
-import 'package:flutter_application_2/modules/ui_kit/button.dart';
+import 'package:flutter_application_2/modules/ui_kit/app_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -37,7 +37,7 @@ class _BookingCalendarWidgetState extends State<BookingCalendarWidget> {
           },
         ),
         SizedBox(height: 16),
-        UiButton(
+        AppButton(
           nameButton: "Забронировать",
           colorButton: ThemeHelper.green,
           isIcon: false,
